@@ -1,0 +1,39 @@
+
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <script src="js/jquery-3.6.0.min.js" type="text/javascript"></script> 
+	<script src="js/jquery-ui.min.js" type="text/javascript"></script>
+ 	<title>AJAX Examples</title>
+	<script>
+	$(document).ready(function() {
+		$( "#searchUAinput" ).change(function() {
+		
+			$.ajax({
+				url: 'searchUA.php', 
+				data: {searchUAform: $( "#searchUAinput" ).val()},
+				success: function(data){
+					$('#searchUAresult').html(data);	
+				
+				}
+			});
+		});
+		
+	});
+	</script>
+</head>
+<body>
+	<h3>Search by User Agent</h3>	
+           
+	<input class="xlarge" id="searchUAinput" type="search" size="30" placeholder="Search By User Agent"/>
+
+	<div id="searchUAresult">User Agent Search Result</div>
+
+	<br/><br/>
+	index.html - View the source here to see the HTML. Notice the "jquery" scripts at the top of the file!<br/>
+	js.zip - <a href="./js.zip">js folder</a> (Download jQuery!)
+
+</body>
+</html>
