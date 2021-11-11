@@ -2,7 +2,7 @@
 <?php
 class DbUtil{
 	public static $loginUser = "emmafor"; 
-	public static $loginPass = "Ecrady01";
+	public static $loginPass = "*******";
 	public static $host = "localhost:3306"; // local host
 	public static $schema = "emmafor"; // DB Schema
 	
